@@ -72,9 +72,9 @@ public class FreeroamScript : Script
     {
         if (name == "CREATE_VEHICLE")
         {
-            int model = (int)args[0];
+			uint model = (uint)args[0];
 
-            if (!Enum.IsDefined(typeof(VehicleHash), model))
+			if (!Enum.IsDefined(typeof(VehicleHash), model))
                 return;
 
             var rot = API.getEntityRotation(sender.handle);
